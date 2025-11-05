@@ -26,9 +26,9 @@
       </div>
 
       <div class="user-time-selector">
-        <button type="button" class="user-button">Daily</button>
-        <button type="button" class="user-button">Weekly</button>
-        <button type="button" class="user-button">Monthly</button>
+        <button type="button" class="user-button" aria-pressed="false">Daily</button>
+        <button type="button" class="user-button" aria-pressed="true">Weekly</button>
+        <button type="button" class="user-button" aria-pressed="false">Monthly</button>
       </div>
     </header>
 
@@ -36,7 +36,9 @@
       <div class="dashboard-card-content">
         <div class="dashboard-card-title">
           <h2 class="dashboard-card-name">Work</h2>
-          <img src="./images/icon-ellipsis.svg" alt="">
+          <button class="ellipsis" aria-label="More options">
+            <img src="./images/icon-ellipsis.svg" alt="" aria-label="More options">
+          </button>
         </div>
         <div class="dashboard-card-data">
           <span class="current-time">5hrs</span>
@@ -49,7 +51,9 @@
       <div class="dashboard-card-content">
         <div class="dashboard-card-title">
           <h2 class="dashboard-card-name">Play</h2>
-          <img src="./images/icon-ellipsis.svg" alt="">
+          <button class="ellipsis" aria-label="More options">
+            <img src="./images/icon-ellipsis.svg" alt="" aria-label="More options">
+          </button>
         </div>
         <div class="dashboard-card-data">
           <span class="current-time">1hr</span>
@@ -62,7 +66,9 @@
       <div class="dashboard-card-content">
         <div class="dashboard-card-title">
           <h2 class="dashboard-card-name">Study</h2>
-          <img src="./images/icon-ellipsis.svg" alt="">
+          <button class="ellipsis" aria-label="More options">
+            <img src="./images/icon-ellipsis.svg" alt="" aria-label="More options">
+          </button>
         </div>
         <div class="dashboard-card-data">
           <span class="current-time">0hrs</span>
@@ -75,7 +81,9 @@
       <div class="dashboard-card-content">
         <div class="dashboard-card-title">
           <h2 class="dashboard-card-name">Exercise</h2>
-          <img src="./images/icon-ellipsis.svg" alt="">
+          <button class="ellipsis" aria-label="More options">
+            <img src="./images/icon-ellipsis.svg" alt="" aria-label="More options">
+          </button>
         </div>
         <div class="dashboard-card-data">
           <span class="current-time">1hr</span>
@@ -88,7 +96,9 @@
       <div class="dashboard-card-content">
         <div class="dashboard-card-title">
           <h2 class="dashboard-card-name">Social</h2>
-          <img src="./images/icon-ellipsis.svg" alt="">
+          <button class="ellipsis" aria-label="More options">
+            <img src="./images/icon-ellipsis.svg" alt="" aria-label="More options">
+          </button>
         </div>
         <div class="dashboard-card-data">
           <span class="current-time">1hr</span>
@@ -101,7 +111,9 @@
       <div class="dashboard-card-content">
         <div class="dashboard-card-title">
           <h2 class="dashboard-card-name">Self Care</h2>
-          <img src="./images/icon-ellipsis.svg" alt="">
+          <button class="ellipsis" aria-label="More options">
+            <img src="./images/icon-ellipsis.svg" alt="" aria-label="More options">
+          </button>
         </div>
         <div class="dashboard-card-data">
           <span class="current-time">0hr</span>
