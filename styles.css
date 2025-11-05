@@ -1,0 +1,317 @@
+/*FONT*/
+@font-face {
+  font-family: "rubik";
+  src: url("./font/Rubik-VariableFont_wght.ttf");
+  font-style: normal;
+  font-weight: 300 500;
+}
+
+/*COLORS AND FONT ATTRIBUTES*/
+:root {
+  --Purple-600: hsl(246, 80%, 60%);
+  --Purple-500: hsl(235, 45%, 61%);
+
+  --Orange-300: hsl(15, 100%, 70%); /*work*/
+  --Blue-300: hsl(195, 74%, 62%); /*play*/
+  --Pink-400: hsl(348, 100%, 68%); /*study*/
+  --Green-400: hsl(145, 58%, 55%); /*exercise*/
+  --Purple-700: hsl(264, 64%, 52%); /*social*/
+  --Yellow-300: hsl(43, 84%, 65%); /*self care*/
+
+  --Navy-950: hsl(226, 43%, 10%);
+  --Navy-900: hsl(235, 46%, 20%);
+  --Navy-800: hsl(235, 41%, 34%);
+  --Navy-200: hsl(236, 100%, 87%);
+
+  --Grey-200: hsl(0, 0%, 85%);
+  --White: hsl(0, 100%, 100%);
+  --Black: hsl(0, 0%, 0%);
+
+  --rubik-light: 300;
+  --rubik-regular: 400;
+  --rubik-medium: 500;
+
+  --border-radius: 0.938rem;
+
+  --rubik: "rubik", "sans-serif";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--rubik);
+  color: var(--White); /*temporal*/
+}
+
+body {
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr;
+  background-color: var(--Navy-950);
+  min-height: 100dvh;
+}
+
+.main-container {
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr;
+  padding: 5rem 1.5rem;
+  gap: 1.5rem;
+}
+
+.user-container {
+  background-color: var(--Navy-900);
+  border-radius: var(--border-radius);
+  width: 100%;
+}
+
+.user-info {
+  background-color: var(--Purple-600);
+  border-radius: var(--border-radius);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.user-report {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.user-label {
+  color: var(--Navy-200);
+  font-size: 0.938rem;
+  font-weight: var(--rubik-regular);
+  line-height: 1.125rem;
+}
+
+.user-name {
+  color: var(--White);
+  font-size: 1.5rem;
+  font-weight: var(--rubik-light);
+  line-height: 1.5rem;
+}
+
+.user-icon {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  border: 3px solid var(--White);
+  box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.5);
+}
+
+.user-time-selector {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.user-button {
+  color: var(--Purple-500);
+  background-color: var(--Navy-900);
+  font-size: 1.125rem;
+  font-weight: var(--rubik-regular);
+  line-height: 1.313rem;
+  margin: 1.5rem;
+  border-style: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+}
+
+.user-button.active {
+  color: var(--White);
+}
+
+.dashboard-card {
+  position: relative;
+  border-radius: var(--border-radius);
+  width: 100%;
+  overflow: hidden;
+  isolation: isolate;
+  padding-top: 2.375rem;
+  z-index: 1;
+}
+
+.dashboard-card::before {
+  position: absolute;
+  content: "";
+  top: -1rem;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--border-radius);
+  background-position: 90% 0.5rem;
+  background-repeat: no-repeat;
+  transition: transform 0.5s ease;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.dashboard-card:hover::before {
+  transform: translateY(-5%);
+}
+
+.dashboard-work::before {
+  background-color: var(--Orange-300);
+  background-image: url("./images/icon-work.svg");
+}
+
+.dashboard-play::before {
+  background-color: var(--Blue-300);
+  background-image: url("./images/icon-play.svg");
+}
+
+.dashboard-study::before {
+  background-color: var(--Pink-400);
+  background-image: url("./images/icon-study.svg");
+}
+.dashboard-exercise::before {
+  background-color: var(--Green-400);
+  background-image: url("./images/icon-exercise.svg");
+}
+.dashboard-social::before {
+  background-color: var(--Purple-700);
+  background-image: url("./images/icon-social.svg");
+}
+.dashboard-selfcare::before {
+  background-color: var(--Yellow-300);
+  background-image: url("./images/icon-self-care.svg");
+}
+
+.dashboard-card-content {
+  background-color: var(--Navy-900);
+  border-radius: var(--border-radius);
+  transition: background-color 0.6s ease;
+  padding: 1.5rem;
+  cursor: pointer;
+}
+
+.dashboard-card-content:active,
+.dashboard-card-content:hover {
+  background-color: var(--Navy-800);
+}
+
+.dashboard-card-title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dashboard-card-name {
+  font-size: 1.125rem;
+  font-weight: var(--rubik-medium);
+  line-height: 1.313rem;
+}
+
+.dashboard-card-data {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.current-time {
+  font-size: 2rem;
+  font-weight: var(--rubik-light);
+  line-height: 2.375rem;
+}
+
+.previous-time {
+  color: var(--Navy-200);
+  font-size: 0.938rem;
+  font-weight: var(--rubik-regular);
+  line-height: 1.125rem;
+}
+
+@media screen and (min-width: 768px) {
+  .main-container {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+
+  .user-container {
+    grid-column: span 3 / span 3;
+  }
+
+  .user-time-selector {
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .dashboard-card {
+    height: 100%;
+  }
+
+  .dashboard-card-content {
+    height: 100%;
+  }
+
+  .dashboard-card-data {
+    margin-top: 1rem;
+    flex-wrap: wrap;
+  }
+  .current-time {
+    font-size: 3.5rem;
+    line-height: 4.125rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .main-container {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    padding-inline: 10rem;
+  }
+
+  .user-container {
+    grid-column: span 1 / span 1;
+    grid-row: span 2 / span 2;
+    height: 100%;
+  }
+
+  .user-info {
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding-bottom: 6.25rem;
+    gap: 3rem;
+  }
+
+  .user-name {
+    font-size: 2.5rem;
+    line-height: 2.938rem;
+  }
+
+  .user-time-selector {
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-left: 2rem;
+  }
+
+  .user-button {
+    text-align: left;
+    width: auto;
+    margin: 0;
+    width: fit-content;
+  }
+
+  .user-button:first-child {
+    margin-top: 1.5rem;
+  }
+
+  .user-button:last-child {
+    margin-bottom: 1.5rem;
+  }
+
+  .dashboard-card-data {
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+}

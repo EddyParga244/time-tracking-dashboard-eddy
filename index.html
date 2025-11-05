@@ -1,72 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" type="text/css" href="./styles.css">
   <script defer src="./main.js"></script>
-  
+
   <title>Frontend Mentor | Time tracking dashboard</title>
 
 </head>
+
 <body>
+  <main class="main-container">
+    <header class="user-container">
+      <div class="user-info">
+        <img class="user-icon" src="./images/image-jeremy.png" alt="Image of Jeremy Robson">
+        <h1 class="user-report">
+          <span class="user-label">Report for</span>
+          <span class="user-name">Jeremy Robson</span>
+        </h1>
+      </div>
 
-  Report for
-  Jeremy Robson
+      <div class="user-time-selector">
+        <button type="button" class="user-button">Daily</button>
+        <button type="button" class="user-button">Weekly</button>
+        <button type="button" class="user-button">Monthly</button>
+      </div>
+    </header>
 
-  Daily
-  Weekly
-  Monthly
+    <section class="dashboard-card dashboard-work">
+      <div class="dashboard-card-content">
+        <div class="dashboard-card-title">
+          <h2 class="dashboard-card-name">Work</h2>
+          <img src="./images/icon-ellipsis.svg" alt="">
+        </div>
+        <div class="dashboard-card-data">
+          <span class="current-time">5hrs</span>
+          <span class="previous-time">Previous - 7hrs</span>
+        </div>
+      </div>
+    </section>
 
-  Work
-  5hrs <!-- daily -->
-  Previous - 7hrs <!-- daily -->
-  32hrs <!-- weekly -->
-  Previous - 36hrs <!-- weekly -->
-  103hrs <!-- monthly -->
-  Previous - 128hrs <!-- monthly -->
+    <section class="dashboard-card dashboard-play">
+      <div class="dashboard-card-content">
+        <div class="dashboard-card-title">
+          <h2 class="dashboard-card-name">Play</h2>
+          <img src="./images/icon-ellipsis.svg" alt="">
+        </div>
+        <div class="dashboard-card-data">
+          <span class="current-time">1hr</span>
+          <span class="previous-time">Previous - 2hrs</span>
+        </div>
+      </div>
+    </section>
 
-  Play
-  1hr <!-- daily -->
-  Previous - 2hrs <!-- daily -->
-  10hrs <!-- weekly -->
-  Previous - 8hrs <!-- weekly -->
-  23hrs <!-- monthly -->
-  Previous - 29hrs <!-- monthly -->
+    <section class="dashboard-card dashboard-study">
+      <div class="dashboard-card-content">
+        <div class="dashboard-card-title">
+          <h2 class="dashboard-card-name">Study</h2>
+          <img src="./images/icon-ellipsis.svg" alt="">
+        </div>
+        <div class="dashboard-card-data">
+          <span class="current-time">0hrs</span>
+          <span class="previous-time">Previous - 1hr</span>
+        </div>
+      </div>
+    </section>
 
-  Study
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 7hrs <!-- weekly -->
-  13hrs <!-- monthly -->
-  Previous - 19hrs <!-- monthly -->
+    <section class="dashboard-card dashboard-exercise">
+      <div class="dashboard-card-content">
+        <div class="dashboard-card-title">
+          <h2 class="dashboard-card-name">Exercise</h2>
+          <img src="./images/icon-ellipsis.svg" alt="">
+        </div>
+        <div class="dashboard-card-data">
+          <span class="current-time">1hr</span>
+          <span class="previous-time">Previous - 1hr</span>
+        </div>
+      </div>
+    </section>
 
-  Exercise
-  1hr <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 5hrs <!-- weekly -->
-  11hrs <!-- monthly -->
-  Previous - 18hrs <!-- monthly -->
+    <section class="dashboard-card dashboard-social">
+      <div class="dashboard-card-content">
+        <div class="dashboard-card-title">
+          <h2 class="dashboard-card-name">Social</h2>
+          <img src="./images/icon-ellipsis.svg" alt="">
+        </div>
+        <div class="dashboard-card-data">
+          <span class="current-time">1hr</span>
+          <span class="previous-time">Previous - 3hrs</span>
+        </div>
+      </div>
+    </section>
 
-  Social
-  1hr <!-- daily -->
-  Previous - 3hrs <!-- daily -->
-  5hrs <!-- weekly -->
-  Previous - 10hrs <!-- weekly -->
-  21hrs <!-- monthly -->
-  Previous - 23hrs <!-- monthly -->
-
-  Self Care
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  2hrs <!-- weekly -->
-  Previous - 2hrs <!-- weekly -->
-  7hrs <!-- monthly -->
-  Previous - 11hrs <!-- monthly -->
-
+    <section class="dashboard-card dashboard-selfcare">
+      <div class="dashboard-card-content">
+        <div class="dashboard-card-title">
+          <h2 class="dashboard-card-name">Self Care</h2>
+          <img src="./images/icon-ellipsis.svg" alt="">
+        </div>
+        <div class="dashboard-card-data">
+          <span class="current-time">0hr</span>
+          <span class="previous-time">Previous - 1hrs</span>
+        </div>
+      </div>
+    </section>
+  </main>
 </body>
+
 </html>
