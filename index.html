@@ -25,10 +25,10 @@
         </h1>
       </div>
 
-      <div class="user-time-selector">
-        <button type="button" class="user-button" aria-pressed="false">Daily</button>
-        <button type="button" class="user-button" aria-pressed="true">Weekly</button>
-        <button type="button" class="user-button" aria-pressed="false">Monthly</button>
+      <div class="user-time-selector" role="radiogroup" aria-label="Select time period">
+        <button type="button" class="user-button" role="radio" aria-checked="false" tabindex="0">Daily</button>
+        <button type="button" class="user-button" role="radio" aria-checked="true" tabindex="-1">Weekly</button>
+        <button type="button" class="user-button" role="radio" aria-checked="false" tabindex="-1">Monthly</button>
       </div>
     </header>
 

@@ -62,8 +62,8 @@ button.forEach(btn => {
         button.forEach(b => b.classList.remove("active"));
         btn.classList.add("active");
 
-        button.forEach(btn => btn.setAttribute('aria-pressed', 'false')); // Reset all
-        btn.setAttribute('aria-pressed', 'true'); // Set active
+        button.forEach(btn => btn.setAttribute('aria-checked', 'false')); // Reset all
+        btn.setAttribute('aria-checked', 'true'); // Set active
 
         const period = btnTextToPeriod(btn);
         showData(period);
